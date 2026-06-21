@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Booking | Online French Tutor Canada | École Canada French</title>
+  <meta name="description" content="Book your free French trial assessment call directly on our calendar. Contact us for inquiries regarding TEF prep, K-12 support, or private lessons.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Global Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <svg class="logo-leaf" viewBox="0 0 24 24">
+          <path d="M12 2s1.5 4 2.5 5.5 3-1.5 4.5-.5-1 3.5 0 5 4.5.5 4.5 2-4 .5-4.5 2 1.5 3 0 4.5-3.5-1-5 0 0 3.5-1.5 3.5-1.5-4-2.5-5.5-3 1.5-4.5.5 1-3.5 0-5-4.5-.5-4.5-2 4-.5 4.5-2-1.5-3 0-4.5 3.5 1 5 0 0-3.5 1.5-3.5z"/>
+        </svg>
+        <span>École Canada French</span>
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="immigration-prep.html" class="nav-link">Immigration Prep</a></li>
+          <li><a href="conversational.html" class="nav-link">Conversational</a></li>
+          <li><a href="kids-immersion.html" class="nav-link">Kids Support</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+          <li><button class="btn btn-primary cta-booking-trigger">Book Free Trial</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Page Layout -->
+    <section class="section-bg-warm" style="padding-top: 6rem;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 3rem;">
+          <span class="section-tag">Let's Connect</span>
+          <h1>Book a Trial Lesson or Send a Message</h1>
+          <p>Schedule your free 25-minute consultation directly below, or fill out the form if you have specific questions about group enrollment or billing.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Calendar Section -->
+          <div id="booking-calendar-section" class="calendar-container">
+            <h3 style="margin-bottom: 0.5rem; font-family: var(--font-sans); font-weight: 700; font-size: 1.3rem;">1. Select a Date & Time</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 1.5rem; color: var(--color-text-muted);">Consultations are run online via Zoom. We assess current vocabulary, grammar foundation, and set learning targets.</p>
+            
+            <!-- Reusable Calendar Widget Markup -->
+            <div class="mock-calendar">
+              <div class="calendar-header">
+                <span class="calendar-month">October 2026</span>
+                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Timezone: EST (Toronto/Montreal)</span>
+              </div>
+              <div class="calendar-days">
+                <span class="day-label">Su</span><span class="day-label">Mo</span><span class="day-label">Tu</span><span class="day-label">We</span><span class="day-label">Th</span><span class="day-label">Fr</span><span class="day-label">Sa</span>
+              </div>
+              <div class="calendar-grid">
+                <span class="calendar-day empty"></span>
+                <span class="calendar-day empty"></span>
+                <span class="calendar-day empty"></span>
+                <span class="calendar-day empty"></span>
+                <span class="calendar-day available">1</span>
+                <span class="calendar-day">2</span>
+                <span class="calendar-day">3</span>
+                <span class="calendar-day">4</span>
+                <span class="calendar-day available">5</span>
+                <span class="calendar-day">6</span>
+                <span class="calendar-day available">7</span>
+                <span class="calendar-day available">8</span>
+                <span class="calendar-day">9</span>
+                <span class="calendar-day">10</span>
+                <span class="calendar-day">11</span>
+                <span class="calendar-day available">12</span>
+                <span class="calendar-day">13</span>
+                <span class="calendar-day available">14</span>
+                <span class="calendar-day available">15</span>
+                <span class="calendar-day">16</span>
+                <span class="calendar-day">17</span>
+                <span class="calendar-day">18</span>
+                <span class="calendar-day available">19</span>
+                <span class="calendar-day">20</span>
+                <span class="calendar-day available">21</span>
+                <span class="calendar-day available">22</span>
+                <span class="calendar-day">23</span>
+                <span class="calendar-day">24</span>
+                <span class="calendar-day">25</span>
+                <span class="calendar-day available">26</span>
+                <span class="calendar-day">27</span>
+                <span class="calendar-day available">28</span>
+                <span class="calendar-day available">29</span>
+                <span class="calendar-day">30</span>
+                <span class="calendar-day">31</span>
+              </div>
+              <div class="time-slots-container">
+                <div class="time-slots-title">Available slots for <span class="selected-date-display">...</span>:</div>
+                <div class="time-slots-grid">
+                  <!-- JS Populated -->
+                </div>
+              </div>
+              <div class="booking-summary">
+                <h4>Assessment Booking Details</h4>
+                <p class="booking-details-text"></p>
+                <button class="btn btn-primary btn-full" id="confirm-booking-btn">Confirm Assessment Call</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Section -->
+          <div>
+            <div style="background-color: var(--color-bg-white); border-radius: var(--border-radius-lg); border: 1px solid var(--color-border-warm); padding: 2.5rem; box-shadow: var(--shadow-md);">
+              <h3 style="margin-bottom: 1.5rem; font-family: var(--font-sans); font-weight: 700; font-size: 1.3rem;">2. Or Send An Inquiry</h3>
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="contact-name">Full Name</label>
+                  <input type="text" id="contact-name" name="name" class="form-control" placeholder="Jane Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email">Email Address</label>
+                  <input type="email" id="contact-email" name="email" class="form-control" placeholder="jane@domain.ca" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-program">Program Interest</label>
+                  <select id="contact-program" name="program" class="form-control" required style="-webkit-appearance: none; background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020%2020%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5H7z%22%20fill%3D%22%234B5563%22%2F%3E%3C%2Fsvg%3E'); background-repeat: no-repeat; background-position: right 10px center; background-size: 20px;">
+                    <option value="" disabled selected>Select a program...</option>
+                    <option value="immigration">Immigration Exam Prep (TEF/TCF)</option>
+                    <option value="conversational">Adult Conversational French</option>
+                    <option value="kids">French Immersion Homework Support</option>
+                    <option value="other">General Question / Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="contact-message">Your Message</label>
+                  <textarea id="contact-message" name="message" class="form-control" rows="5" placeholder="Let us know your starting French level, school board, or specific exam deadlines..." required style="resize: vertical;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" style="margin-top: 1rem;">Send Message</button>
+              </form>
+            </div>
+
+            <!-- School Details Overlay -->
+            <div style="margin-top: 2rem; padding: 0 1rem;">
+              <ul class="contact-info-list">
+                <li>
+                  <span class="contact-info-icon">📞</span>
+                  <div class="contact-info-text">
+                    <h4>Direct Call</h4>
+                    <p>+1 (800) 555-FREN (3736)</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-info-icon">✉️</span>
+                  <div class="contact-info-text">
+                    <h4>Email Support</h4>
+                    <p>learn@ecolecanadafrench.ca</p>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-info-icon">🕒</span>
+                  <div class="contact-info-text">
+                    <h4>Hours of Operation</h4>
+                    <p>Monday - Friday: 8:00 AM - 8:00 PM EST<br>Saturday: 9:00 AM - 3:00 PM EST</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policies / Rescheduling Accordion -->
+    <section id="policies" class="section-bg-white">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">School Policy</span>
+          <h2>Cancellation & Rescheduling Policies</h2>
+          <p>We work hard to protect our tutors' schedules. Review our core policies on private sessions and group circles.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>What is the rescheduling policy for private 1:1 lessons?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-body">
+              <div class="faq-content">
+                To reschedule or cancel a private session, you must make changes via your student portal at least 24 hours in advance. If you submit a cancellation request within 24 hours of your class time or do not attend a scheduled session, the lesson credit will be charged in full.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>What happens if we miss a group conversational class?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-body">
+              <div class="faq-content">
+                Group classes run on fixed schedules and cannot be rescheduled or credited. If you miss a class, you will receive our weekly review email containing the core audio pronunciation files, conversation themes, and homework worksheets so you don't fall behind.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-header">
+              <h4>How do subscription billings work?</h4>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-body">
+              <div class="faq-content">
+                All of our regular monthly tutoring packages operate on automatic recurring billing cycle. You can change your package frequency, upgrade, downgrade, or pause your subscription before the next billing date directly inside your account panel.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="color: var(--color-bg-warm);">
+          <svg class="logo-leaf" viewBox="0 0 24 24" style="fill: var(--color-accent);">
+            <path d="M12 2s1.5 4 2.5 5.5 3-1.5 4.5-.5-1 3.5 0 5 4.5.5 4.5 2-4 .5-4.5 2 1.5 3 0 4.5-3.5-1-5 0 0 3.5-1.5 3.5-1.5-4-2.5-5.5-3 1.5-4.5.5 1-3.5 0-5-4.5-.5-4.5-2 4-.5 4.5-2-1.5-3 0-4.5 3.5 1 5 0 0-3.5 1.5-3.5z"/>
+          </svg>
+          <span>École Canada French</span>
+        </a>
+        <p>Providing specialized online French tutoring across Canada. Certified TEF/TCF exam prep, adult conversational classes, and K-12 French immersion support.</p>
+      </div>
+      <div>
+        <h4>Programs</h4>
+        <ul class="footer-links" style="margin-top: 1.5rem;">
+          <li><a href="immigration-prep.html">Immigration Exam Prep</a></li>
+          <li><a href="conversational.html">Conversational French</a></li>
+          <li><a href="kids-immersion.html">Kids Immersion Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links" style="margin-top: 1.5rem;">
+          <li><a href="about.html">About Our Tutors</a></li>
+          <li><a href="contact.html">Contact & Bookings</a></li>
+          <li><a href="contact.html#policies">Rescheduling Policies</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <div style="margin-top: 1.5rem;">
+          <p>📞 +1 (800) 555-FREN (3736)</p>
+          <p>✉️ learn@ecolecanadafrench.ca</p>
+          <p>📍 Montreal | Toronto | Vancouver (Online)</p>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 École Canada French. All rights reserved. Built for Canadian Bilingual Success.</p>
+      <p>Target-driven French tutoring in Canada.</p>
+    </div>
+  </footer>
+
+  <!-- Lead Magnet Modal -->
+  <div id="lead-modal" class="modal-overlay">
+    <div class="modal-container" style="max-width: 500px;">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <div class="modal-header" style="text-align: center;">
+        <h3>Download Your Free Pack</h3>
+        <p>Get instant access to your <strong id="lead-title-display">Resource</strong> in one click.</p>
+      </div>
+      <div class="modal-body">
+        <form id="modal-lead-form">
+          <input type="hidden" id="lead-resource-name" name="resource" value="Free Study Guide">
+          <div class="form-group">
+            <label for="lead-modal-email">Email Address</label>
+            <input type="email" id="lead-modal-email" class="form-control" placeholder="name@domain.ca" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top: 1rem;">Email Me the Free PDF</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
